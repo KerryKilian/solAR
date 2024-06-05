@@ -17,8 +17,8 @@ public class TimeController : MonoBehaviour
     void Start()
     {
         // Initialisiere den Slider
-        timeSlider.minValue = -365 * 10; // 10 Jahre in der Vergangenheit
-        timeSlider.maxValue = 365 * 10; // 10 Jahre in der Zukunft
+        timeSlider.minValue = -365 * 100; // 10 Jahre in der Vergangenheit
+        timeSlider.maxValue = 365 * 100; // 10 Jahre in der Zukunft
         timeSlider.value = 0; // Startzeitpunkt
 
         // Aktualisiere die Zeit bei der Initialisierung
@@ -62,5 +62,10 @@ public class TimeController : MonoBehaviour
         {
             timeLabel.text = "Tage: " + value.ToString("F0");
         }
+    }
+
+    public void SetTimeSpeed(float newTimeSpeed)
+    {
+        timeSpeed = newTimeSpeed;
     }
 }

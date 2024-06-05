@@ -23,7 +23,7 @@ public class Orbit : MonoBehaviour
         float angle = (timeInDays / orbitalPeriod) * 360.0f;
 
         // Skalierte Distanz berechnen
-        float distance = GlobalSettings.Instance.distanceScaleFactor * initialDistance;
+        float distance = initialDistance * GlobalSettings.Instance.distanceScaleFactor;
 
         // Setze die Position des Planeten entlang der Umlaufbahn
         Vector3 position = sun.position + new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), 0, Mathf.Sin(angle * Mathf.Deg2Rad)) * distance;

@@ -31,4 +31,6 @@ public class GlobalSettings : MonoBehaviour
     {
         timeInDays = days;
     }
+
+    
 }
